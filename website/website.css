@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #292929;
+}
+
+.topbar {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu {
+  color: #555;
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .active {
+  border-bottom: 2px solid #e84d59;
+  padding-bottom: 8px;
+}
+
+.topbar {
+  position: relative;
+}
+
+.site-logo {
+  width: 200px;
+  height: 55px;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo b {
+  font-size: 15px;
+}
+
+.search {
+  margin-left: auto;
+  width: 250px;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 25px;
+}
+
+.icons {
+  font-size: 22px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.filters {
+  padding: 20px 25px;
+  border-right: 1px solid #eee;
+}
+
+.filters h3 {
+  font-size: 14px;
+}
+
+.filters p {
+  color: #555;
+  font-size: 14px;
+}
+
+.filters span {
+  float: right;
+  color: #888;
+}
+
+.filter-search {
+  width: 100%;
+  padding: 14px 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sizes button {
+  background: white;
+  border: 1px solid #777;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.catalog {
+  padding: 20px;
+}
+
+.breadcrumb,
+.product p {
+  color: #888;
+  font-size: 13px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.heading small {
+  color: #888;
+}
+
+.heading select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.photo {
+  height: 360px;
+  position: relative;
+  background: #eee;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 5px 9px;
+  border-radius: 50%;
+  background: #ffffffcc;
+  font-size: 22px;
+}
+
+.product h3 {
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 7px;
+}
+
+.product p {
+  margin: 8px 0;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo {
+    display: none;
+  }
+}
